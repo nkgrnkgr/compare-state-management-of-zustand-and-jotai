@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "/state-management-zustand-jotai/",
+  base: "/compare-state-management-of-zustand-and-jotai/",
   plugins: [
     remix({
       ssr: false,
