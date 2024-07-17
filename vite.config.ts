@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     remix({
       ssr: false,
-      basename: "/state-management-zustand-jotai/",
+      basename: "/compare-state-management-of-zustand-and-jotai/",
       buildEnd(args) {
         if (!args.viteConfig.isProduction) return;
         const buildPath = args.viteConfig.build.outDir;
