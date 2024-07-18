@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import type { MetaFunction } from "@remix-run/node";
+import { JotaiPlayground } from "~/components/jotai";
 import { ZustandPlayground } from "~/components/zustand";
 
 export const meta: MetaFunction = () => {
@@ -17,6 +18,7 @@ export default function Index() {
       </h1>
       <Box w="1000px">
         <ZustandPlayground />
+        <JotaiPlayground />
       </Box>
     </div>
   );

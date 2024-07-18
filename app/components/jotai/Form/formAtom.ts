@@ -119,7 +119,6 @@ export const getFormReadOnlyAtom = atom<FormValues>((get) => {
   const name = get(nameAtom);
   const note = get(noteAtom);
   const selectedGenderValue = get(genderAtom);
-  const birthday = get(birthdayAtom);
   const isPregnant = get(isPregnantAtom);
   const selectedMedicineId = get(medicineIdAtom);
   const families = get(familyIdsAtom).map((id) => get(familiesAtom(id)));
@@ -128,7 +127,6 @@ export const getFormReadOnlyAtom = atom<FormValues>((get) => {
     name,
     note,
     selectedGenderValue,
-    birthday,
     isPregnant,
     selectedMedicineId,
     families,

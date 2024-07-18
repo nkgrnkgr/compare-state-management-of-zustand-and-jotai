@@ -1,21 +1,17 @@
 import { Box, HStack, Stack } from "@chakra-ui/react";
-import { useSetAtom } from "jotai";
-import { useEffect } from "react";
 import { Families } from "./Families";
 import { GenderSelect } from "./GenderSelect";
 import { GenderSpecificForm } from "./GenderSpecificForm";
 import { Result } from "./Result";
 import { SubmitButton } from "./SubmitButton";
-import { loadFormValuesWriteOnlyAtom } from "./formAtom";
-import { useSuspenseFormQuery } from "./useFormQuery";
 
 export function Form() {
   // 非同期通信のIFがこんな感じでuseEffectが結果必要だとあんまり Suspense が意味ない
-  const data = useSuspenseFormQuery();
-  const load = useSetAtom(loadFormValuesWriteOnlyAtom);
-  useEffect(() => {
-    load(data);
-  }, [data, load]);
+  // const data = useSuspenseFormQuery();
+  // const load = useSetAtom(loadFormValuesWriteOnlyAtom);
+  // useEffect(() => {
+  //   load(data);
+  // }, [data, load]);
   return (
     <HStack gap={2} alignItems="baseline">
       <form>
