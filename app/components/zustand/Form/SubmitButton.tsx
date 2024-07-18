@@ -4,5 +4,9 @@ import { selectHasError } from "./selectors";
 
 export function SubmitButton() {
   const isDisabled = useFormStore(selectHasError);
-  return <Button isDisabled={isDisabled}>送信</Button>;
+  return (
+    <Button colorScheme="green" isDisabled={isDisabled}>
+      送信
+    </Button>
+  );
 }

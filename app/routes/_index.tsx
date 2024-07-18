@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import type { MetaFunction } from "@remix-run/node";
 import { ZustandPlayground } from "~/components/zustand";
 
@@ -14,9 +15,9 @@ export default function Index() {
       <h1 className="text-3xl">
         compare-state-management-of-zustand-and-jotai
       </h1>
-      <div>
+      <Box w="1000px">
         <ZustandPlayground />
-      </div>
+      </Box>
     </div>
   );
 }

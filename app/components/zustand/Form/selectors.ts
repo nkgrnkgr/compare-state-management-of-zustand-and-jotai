@@ -1,9 +1,7 @@
 import { type FormState, GENDER } from "./formStore";
 
 export const selectHasError = (state: FormState) =>
-  state.errorMessages.name !== null ||
-  state.errorMessages.birthday !== null ||
-  state.errorMessages.note !== null;
+  state.errorMessages.name !== null || state.errorMessages.note !== null;
 
 // 多分ここじゃない方がよさそう
 // 非同期でとってくるならStateに追加するのもあり
