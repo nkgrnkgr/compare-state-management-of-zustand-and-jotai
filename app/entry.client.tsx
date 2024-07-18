@@ -4,15 +4,18 @@
  * For more information, see https://remix.run/file-conventions/entry.client
  */
 
+import { ChakraProvider } from "@chakra-ui/react";
 import { RemixBrowser } from "@remix-run/react";
-import { startTransition, StrictMode } from "react";
+import { StrictMode, startTransition } from "react";
 import { hydrateRoot } from "react-dom/client";
 
 startTransition(() => {
   hydrateRoot(
     document,
     <StrictMode>
-      <RemixBrowser />
-    </StrictMode>
+      <ChakraProvider>
+        <RemixBrowser />
+      </ChakraProvider>
+    </StrictMode>,
   );
 });
