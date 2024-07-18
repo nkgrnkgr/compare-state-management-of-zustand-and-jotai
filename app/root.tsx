@@ -1,3 +1,4 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import {
   Links,
   Meta,
@@ -5,7 +6,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import "./tailwind.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,7 +26,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <ChakraProvider>
+      <Outlet />;
+    </ChakraProvider>
+  );
 }
 
 export function HydrateFallback() {
