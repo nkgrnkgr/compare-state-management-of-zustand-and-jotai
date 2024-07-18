@@ -1,5 +1,5 @@
-import { assertExist } from "@/shared/utils";
 import { Input } from "@chakra-ui/react";
+import { assertExists } from "~/utils/assertExists";
 import { useFormStore } from "../formStore";
 
 type Props = {
@@ -11,7 +11,7 @@ export function InputFamilyName({ id }: Props) {
     (state) =>
       state.formValues.families.find((family) => family.id === id)?.name,
   );
-  assertExist(name);
+  assertExists(name);
   const updateFamilyName = useFormStore((state) => state.updateFamilyName);
   return (
     <Input
