@@ -148,18 +148,10 @@ export const isDisabledButtonReadOnlyAtom = atom<boolean>(
   (get) =>
     get(errorMessagesAtom).name !== null ||
     get(errorMessagesAtom).note !== null ||
-    get(errorMessagesAtom).birthday !== null,
 );
 
 function parseState(formValues: FormValues) {
   const result = formSchema.safeParse(formValues);
   if (result.success) return null;
   return result.error.format();
-}
-
-function formatDate(date: Date): AWSDate {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0"); // 月は0から始まるので+1する
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}` as AWSDate;
 }
