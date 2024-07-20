@@ -147,7 +147,7 @@ export const getNoteErrorMessagesReadOnlyAtom = atom<string | null>(
 export const isDisabledButtonReadOnlyAtom = atom<boolean>(
   (get) =>
     get(errorMessagesAtom).name !== null ||
-    get(errorMessagesAtom).note !== null ||
+    get(errorMessagesAtom).note !== null,
 );
 
 function parseState(formValues: FormValues) {
